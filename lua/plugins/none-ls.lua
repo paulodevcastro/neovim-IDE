@@ -11,8 +11,10 @@ return {
         null_ls.builtins.formatting.stylua,
         -- start prettier for no lua languages
         null_ls.builtins.formatting.prettier,
-        -- start eslint for javascript
+        -- start eslint_d for javascript
         require("none-ls.diagnostics.eslint_d"),
+        -- clang format C/C++
+        null_ls.builtins.formatting.clang_format,
       },
     })
     vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "[C]ode [F]ormat" })
